@@ -115,7 +115,7 @@ Cambiar el valor a una archivo de reistro
 ```powershell
 Set-ItemProperty -Path "HKLM:\system\CurrentControlSet\Control\Terminal Server" -name "fDenyTSConnections" -value 0
 ```
-> En este ejemplo estamos cambiando el valor de 1 a 0 a nuestro archivo **fDenyTSConnections** que se encuentra en nuestra unidad HKLM (HKEY_LOCAL_MACHINE). El número 0 especifica que las conexiones de escritorio remoto están habilitadas. 
+> En este ejemplo estamos cambiando el valor de 1 a 0 a nuestro archivo **fDenyTSConnections** que se encuentra en nuestra unidad HKLM (HKEY_LOCAL_MACHINE). El número 0 especifica que la conexión de escritorio remoto está habilitado.
 
 > El archivo **fDenyTSConnections** especifica si las conexiones a escritorio remoto están habilitadas.
  
