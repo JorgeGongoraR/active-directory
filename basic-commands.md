@@ -54,7 +54,7 @@ Reiniciar otro host dentro de tu dominio
 Restart-Computer -ComputerName "ServerName"
 ```
 
-### Cambiar nombre del servidor
+### Cambiar nombre de un host
 
 Obtener el nombre de nuestro host
 ```powershell
