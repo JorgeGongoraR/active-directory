@@ -31,19 +31,19 @@ Stop-Computer
 ```
 Apagar otro host dentro de tu dominio
 ```powershell
-Stop-Computer -ComputerName "Server1"
+Stop-Computer -ComputerName "Host1"
 ```
 Apagar multiples hosts dentro de tu dominio
 ```powershell
-Stop-Computer -ComputerName "Server1", "Server2", "Server3", "ServerN"
+Stop-Computer -ComputerName "HostName", "HostName", "HostName"
 ```
 Apagar un host usando credenciales de administrador
 ```powershell
-Stop-Computer -ComputerName "Server1" -Credential DOMAIN\Administrator
+Stop-Computer -ComputerName "HostName" -Credential DOMAIN\Administrator
 ```
 Forzar el apagado de un host
 ```powershell
-Stop-Computer -ComputerName "Server1" -Force
+Stop-Computer -ComputerName "HostName" -Force
 ```
 Reiniciar host
 ```powershell
@@ -51,7 +51,7 @@ Restart-Computer
 ```
 Reiniciar otro host dentro de tu dominio
 ```powershell
-Restart-Computer -ComputerName "ServerName"
+Restart-Computer -ComputerName "HostName"
 ```
 
 ### Cambiar nombre de un host
@@ -62,11 +62,11 @@ HostName
 ```
 Cambiarle el nombre a tu host
 ```powershell
-Rename-Computer -NewName "ServeName"
+Rename-Computer -NewName "HostName"
 ```
 Cambiarle el nombre a otro host usando las credenciales de dominio
 ```powershell
-Rename-Computer -ComputerName "Old_Server_Name" -NewName "New_Server_Name"
+Rename-Computer -ComputerName "Old_Host_Name" -NewName "New_Host_Name"
 -DomainCredential DOMAIN\User
 ```
 
@@ -115,7 +115,7 @@ Cambiar el valor a una archivo de reistro
 ```powershell
 Set-ItemProperty -Path "HKLM:\system\CurrentControlSet\Control\Terminal Server" -name "fDenyTSConnections" -value 0
 ```
-> En este ejemplo estamos cambiando el valor a nuestro archivo **fDenyTSConnections** que se encuentra en nuestra unidad HKLM (HKEY_LOCAL_MACHINE). 
+> En este ejemplo estamos cambiando el valor de 1 a 0 a nuestro archivo **fDenyTSConnections** que se encuentra en nuestra unidad HKLM (HKEY_LOCAL_MACHINE). El número 0 especifica que las conexiones de escritorio remoto están habilitadas. 
 
 > El archivo **fDenyTSConnections** especifica si las conexiones a escritorio remoto están habilitadas.
  
